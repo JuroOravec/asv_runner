@@ -149,7 +149,7 @@ def disc_benchmarks(root, ignore_import_errors=False):
                 for name, class_attr in inspect.getmembers(module_attr):
                     if inspect.isfunction(class_attr) or inspect.ismethod(class_attr):
                         benchmark = _get_benchmark(
-                            name, module, module_attr, class_attr
+                            name, module, class_attr, module_attr
                         )
                         if benchmark is not None:
                             yield benchmark
